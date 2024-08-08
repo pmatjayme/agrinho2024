@@ -1,0 +1,64 @@
+:root{
+    --cor-principal: #595959dd ;
+    --cor-secundaria: #000000; 
+    --cor-destaque: #000000;
+    --cor-texto: #ffffff;
+}
+
+.favicon {
+    border-radius: 50px;
+}
+
+body {
+    background-image: url(campo.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cor-titulo {
+    color: #22d1d1;
+}
+
+.caixa-principal{
+    background-color: var(--cor-principal);
+    border-radius: 30px;
+    font-size: 25px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 10px;
+}
+
+h1{
+    color: var(--cor-destaque);
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 5px;
+    transition: background-color 0.3s;      
+}
+
+button:hover{
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+}
+
+.texto-resultado{
+    color: #22d1d1;
+    font-size: 100px;
+    padding: 0;
+    margin: 0;
+}

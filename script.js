@@ -6,6 +6,19 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
+        enunciado: "Você está preparado para o teste? ",
+
+        alternativas: [
+            {
+                texto: "Sim",
+                afirmacao: ""
+            },
+            {
+                texto: "Lógico",
+                afirmacao: ""
+            }
+        ]
+    },{
         enunciado: "As áreas rurais têm uma população mais concentrada que as áreas urbanas? ",
 
         alternativas: [
@@ -107,7 +120,83 @@ const perguntas = [
                 afirmacao: "Falso"
             }
         ]
-    },    
+    },
+    {
+        enunciado: "A população urbana é maior que a população rural?",
+        alternativas: [
+            {
+                texto: "Verdadeiro",
+                afirmacao: "Verdadeiro"
+            },
+            {
+                texto: "Falso",
+                afirmacao: "Falso"
+            }    
+        ]
+    },
+    {
+        enunciado: "Qual o percentual dos municípios que são considerados rurais, segundo o IBGE?",
+        alternativas: [
+            {
+                texto: "80,5%",
+                afirmacao: "Falso"
+            },
+            {
+                texto: "60,4%",
+                afirmacao: "Verdadeiro"
+            },
+            {
+                texto: "51,3%",
+                afirmacao: "Falso"
+            },
+            {
+                texto: "26,1%",
+                afirmacao: "Falso"
+            }
+        ]
+    },
+    {
+        enunciado: "Qual dos seguintes fatores é um dos principais motivos para a migração de pessoas do campo para a cidade?",
+        alternativas: [
+            {
+                texto: "Desejo de viver em áreas com menor densidade populacional",
+                afirmacao: "Falso"
+            },
+            {
+                texto: "Necessidade de manter tradições agrícolas",
+                afirmacao: "Falso"
+            },
+            {
+                texto: "Preferência por um estilo de vida mais tranquilo e isolado",
+                afirmacao: "Falso"
+            },
+            {
+                texto: "Busca por melhores oportunidades de emprego e educação",
+                afirmacao: "Verdadeiro"
+            }
+        ]
+    },
+    {
+        enunciado: "Qual dos seguintes benefícios é frequentemente associado à vida no campo em comparação com a vida na cidade?",
+        alternativas: [
+            {
+                texto: "Maior acesso a oportunidades de emprego",
+                afirmacao: "Falso"
+            },
+            {
+                texto: "Maior proximidade com centros comerciais e culturais",
+                afirmacao: "Falso"
+            },
+            {
+                texto: "Menor custo de vida",
+                afirmacao: "Verdadeiro"
+            },
+            {
+                texto: "Maior acesso a serviços de saúde especializados",
+                afirmacao: "Falso"
+            }
+        ]
+    }    
 ];
 
 
@@ -153,16 +242,14 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    if (contagemAfirmacoes == {}) {
-        caixaPerguntas.textContent = "Parabéns pela tentativa. De 6 questões, você acertou: ";
-        const afimMaisEscolhida = Object.keys(contagemAfirmacoes).reduce((a, b) => contagemAfirmacoes[a] > contagemAfirmacoes[b] ? a : b);
-        textoResultado.textContent = contagemAfirmacoes['Verdadeiro'];
+    if (Object.keys(contagemAfirmacoes).length > 0) {
+        caixaPerguntas.innerHTML = '<a class="clique2" href="https://AlmeidaGabrielzinho.github.io/agrinho_2024">Reiniciar Teste</a> Parabéns pela tentativa. De 10 questões, você acertou: ';
+        const numeroVerdadeiro = contagemAfirmacoes['Verdadeiro'] || 0;
+        textoResultado.textContent = numeroVerdadeiro > 1 ? numeroVerdadeiro : 0;
         caixaAlternativas.textContent = "";
     } else {
-        caixaPerguntas.textContent = "Parabéns pela tentativa. De 6 questões, você acertou: ";
-        const afimMaisEscolhida = Object.keys(contagemAfirmacoes).reduce((a, b) => contagemAfirmacoes[a] > contagemAfirmacoes[b] ? a : b);
+        caixaPerguntas.innerHTML = '<a class="clique2" href="https://AlmeidaGabrielzinho.github.io/agrinho_2024">Reiniciar Teste</a> Parabéns pela tentativa. De 10 questões, você acertou: ';
         textoResultado.textContent = 0;
         caixaAlternativas.textContent = "";
     }
-
 }

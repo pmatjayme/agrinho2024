@@ -14,7 +14,7 @@ body {
     background-size: cover;
     background-position: center;
     color: var(--cor-texto);
-    display: flex;
+    display:grid;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -30,7 +30,7 @@ body {
     border-radius: 30px;
     font-size: 25px;
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
     text-align: center;
     padding: 10px;
 }
@@ -61,4 +61,64 @@ button:hover{
     font-size: 100px;
     padding: 0;
     margin: 0;
+}
+
+.rodape {
+    display:flex;
+    text-align: center;
+}
+
+.lista-rodape {
+    display: block;
+    list-style: none;
+}
+
+.lista-rodape-link:hover {
+    color: var(--cor-destaque);
+}
+
+.lista-rodape-item {
+    display: block;
+}
+
+.lista-rodape-link {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.lista-rodape-titulo {
+    font-size: 18px;
+    color: var(--cor-destaque);
+}
+
+.eu{
+    width: 10%;
+}
+
+.texto-resultado{
+    color: #22d1d1;
+    font-size: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+.clique{    
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+.clique:hover {
+    color: var(--cor-destaque);
+}
+
+.clique2{    
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--cor-destaque);
+}
+
+.clique2:hover {
+    color: var(--cor-texto);
 }
